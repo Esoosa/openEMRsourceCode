@@ -1,0 +1,72 @@
+{
+    "name": "laminas/laminas-json-server",
+    "description": "Laminas Json-Server is a JSON-RPC server implementation.",
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "laminas",
+        "json",
+        "server",
+        "json-server"
+    ],
+    "homepage": "https://laminas.dev",
+    "support": {
+        "docs": "https://docs.laminas.dev/laminas-json-server/",
+        "issues": "https://github.com/laminas/laminas-json-server/issues",
+        "source": "https://github.com/laminas/laminas-json-server",
+        "rss": "https://github.com/laminas/laminas-json-server/releases.atom",
+        "chat": "https://laminas.dev/chat",
+        "forum": "https://discourse.laminas.dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        },
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1.99"
+        }
+    },
+    "require": {
+        "php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+        "laminas/laminas-http": "^2.19.0",
+        "laminas/laminas-json": "^3.6.0",
+        "laminas/laminas-server": "^2.16.0"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "laminas/laminas-coding-standard": "^2.4.0",
+        "phpunit/phpunit": "^9.5.26",
+        "psalm/plugin-phpunit": "^0.18.0",
+        "vimeo/psalm": "^5.17"
+    },
+    "conflict": {
+        "laminas/laminas-stdlib": "<3.2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laminas\\Json\\Server\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "files": [
+            "test/TestAsset/FooFunc.php"
+        ],
+        "psr-4": {
+            "LaminasTest\\Json\\Server\\": "test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs",
+        "cs-fix": "phpcbf",
+        "static-analysis": "psalm --shepherd --stats",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-clover clover.xml"
+    },
+    "replace": {
+        "zendframework/zend-json-server": "^3.2.0"
+    }
+}
