@@ -110,7 +110,7 @@
     "select2": "4.0.13",
     "sortablejs": "1.15.6",
     "summernote": "0.9.1",
-    "tiff": "git+https://github.com/seikichi/tiff.js.git",
+    "tiff": "1.1.1",
     "underscore": "1.13.7",
     "validate.js": "0.13.1"
   },
