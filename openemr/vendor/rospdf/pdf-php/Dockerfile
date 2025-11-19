@@ -1,4 +1,4 @@
-FROM php:8.0-cli
+FROM php:8.5.0RC5-cli
 
 # Install PHP extensions
 RUN apt-get update && apt-get install -y \
